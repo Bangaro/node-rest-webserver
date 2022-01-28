@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Signin</title>
 
-    <meta name="google-signin-client_id" content="1023916028923-mnn067lcjn3itrr0lo8oj1s07kddgrcj.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="671972118817-spobrsik0n5kcle0jq832197i1pc2oed.apps.googleusercontent.com">
 
 </head>
 <body>
@@ -25,8 +25,8 @@
         console.log(window.location.hostname.includes('localhost'))
 
         var url = ( window.location.hostname.includes('localhost') )
-                    ? 'http://localhost:8080/api/auth/google'
-                    : 'https://restserver-curso-fher.herokuapp.com/api/auth/google';
+                    ? 'http://localhost:8081/api/auth/google'
+                    : 'https://nodeserver-udemy.herokuapp.com/api/auth/google';
 
 
         function onSignIn(googleUser) {
