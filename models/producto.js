@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const {Schema, model} = require('mongoose');
 
 const ProductoSchema = Schema({
     nombre: {
@@ -25,15 +25,18 @@ const ProductoSchema = Schema({
         ref: 'Categoria',
         required: true
     },
-    descripcion: { type: String },
-    disponible: { type: Boolean, defult: true },
+    descripcion: {type: String},
+    disponible: {type: Boolean, defult: true},
+    img: {
+        type: String
+    }
 });
 
 
-ProductoSchema.methods.toJSON = function() {
-    const { __v, estado, ...data  } = this.toObject();
+ProductoSchema.methods.toJSON = function () {
+    const {__v, estado, ...data} = this.toObject();
     return data;
 }
 
 
-module.exports = model( 'Producto', ProductoSchema );
+module.exports = model('Producto', ProductoSchema);
